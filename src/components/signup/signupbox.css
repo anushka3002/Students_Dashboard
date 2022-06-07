@@ -1,0 +1,13 @@
+#signupbox{
+    display: block;
+    border:1px solid black;
+    width:25%;
+    height:420px;
+    margin:auto;
+    margin-top: 100px;
+    text-align: center;
+}
+input{
+    width:80%;
+    height:10%;
+}
