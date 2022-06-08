@@ -1,8 +1,10 @@
 import "./signupbox.css"
 import axios from "axios"
 import { useState } from "react"
+import { Link } from "react-router-dom"
 
 export const Register=()=>{
+    const [navigate,setNavigate]=useState(false)
 
     const [user,setUser] = useState({
         name:"",
@@ -25,10 +27,13 @@ export const Register=()=>{
             axios.post("http://localhost:3332/admin/register",user)
             .then(res=>console.log(res))
             alert("User Registered")
+            setNavigate(true)
+            
         }
         else{
             console.log(res)
             alert("Invalid Input")
+            setNavigate(false)
         }
     }
 
@@ -50,7 +55,10 @@ export const Register=()=>{
                 <br/>
                 <br/>
                 <div></div>
-                <button onClick={register}>Submit</button>
+                <button
+                 onClick={register}>Submit</button>
+                <p>Or</p>
+                <Link to={"/login"}><button>Login</button></Link>
         </div>
     )
 }
