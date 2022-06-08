@@ -29,10 +29,10 @@ export const Login=()=>{
         <div id="loginBox">
             {/* {console.log("LoginUser",user)} */}
             <h2>Login</h2>
-            <input type="text" name="email" value={user.email} placeholder="Enter your email" onChange={handleChange}></input>
+            <input id="loginInput" type="text" name="email" value={user.email} placeholder="Enter your email" onChange={handleChange}></input>
             <br/>
             <br/>
-            <input type="password" name="password" value={user.password} placeholder="Enter your password" onChange={handleChange}></input>
+            <input id="loginInput" type="password" name="password" value={user.password} placeholder="Enter your password" onChange={handleChange}></input>
             <br/>
             <br/>
             <button className="button" onClick={login}>Login</button>

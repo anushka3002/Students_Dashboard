@@ -1,12 +1,11 @@
 import { Link } from "react-router-dom"
+import { Navbar } from "../navbar/navbar"
 import "./dashboard.css"
 
 export const Dashboard=()=>{
     return(
-        <>
-            <div id="header">
-                <h3>Dashboard</h3>
-            </div>
+        <div id="whole">
+            <Navbar/>
             <br/>
             <div id="container">
             <div id="studentsCard">
@@ -19,6 +18,6 @@ export const Dashboard=()=>{
             <h1 id="bold">Stuents PieChart</h1>
         </div>
         </div>
-        </>
+        </div>
     )
 }
