@@ -4,6 +4,7 @@ import {Routes,Route} from "react-router"
 import { Homepage } from "../homepage/homepage";
 import { StudentInfo } from "../students/student_info";
 import { Dashboard } from "../dashboard/dashboard";
+import { EventInfo } from "../event/event";
 
 export const AllRoutes=()=>{
     return(
@@ -13,6 +14,7 @@ export const AllRoutes=()=>{
             <Route exact path="/register" element={<Register/>}/>
             <Route exact path="/login" element={<Login/>}/>
             <Route exact path="/student" element={<StudentInfo/>}/>
+            <Route exact path="/event" element={<EventInfo/>}/>
         </Routes>
         </>
     )

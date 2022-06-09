@@ -12,7 +12,7 @@ export const Dashboard=()=>{
             <Link to={"/student"}><h1 id="bold">Students List</h1></Link>
         </div>
         <div id="eventsCard">
-            <h1 id="bold">Events List</h1>
+            <Link to={"/event"}><h1 id="bold">Events List</h1></Link>
         </div>
         <div id="pieChart">
             <h1 id="bold">Stuents PieChart</h1>

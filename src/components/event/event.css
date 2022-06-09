@@ -1,0 +1,45 @@
+#bigContainerEvent{
+    display: flex;
+    width:100%;
+  }
+  #firstContainerEvent{
+    width:70%;
+  }
+  
+  #eventsTable {
+      font-family: Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 80%;
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+    
+    #eventsTable td, #eventsTable th {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+    
+    #eventsTable tr:nth-child(even){background-color: #f2f2f2;}
+    
+    #eventsTable tr:hover {background-color: #ddd;}
+    
+    #eventsTable th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: center;
+      background-color: #aa045f;
+      color: white;
+    }
+    #secondContainerEvent{
+        width:30%;
+    }
+    #studentButtonEvent{
+      width:35%;
+      height:30px;
+      border-radius: 5px;
+      background-color: #f3c5e3;
+      font-size: 15px;
+      border:none;
+      margin-bottom: 5px;
+    }
+    
