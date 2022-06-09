@@ -26,18 +26,26 @@ export const Login=()=>{
 
     return(
         <>
+        <div id="studentOut">
+        <div id="signContainer">
         <div id="loginBox">
             {/* {console.log("LoginUser",user)} */}
-            <h2>Login</h2>
+            <h2 style={{textDecoration:"underline"}}>Login</h2>
             <input id="loginInput" type="text" name="email" value={user.email} placeholder="Enter your email" onChange={handleChange}></input>
             <br/>
             <br/>
             <input id="loginInput" type="password" name="password" value={user.password} placeholder="Enter your password" onChange={handleChange}></input>
             <br/>
             <br/>
-            <Link to={"/dashboard"}><button className="button" onClick={login}>Login</button></Link>
+            <Link to={"/dashboard"}><button  id="signbutton" className="button" onClick={login}>Login</button></Link>
             <div>or</div>
-            <Link to={"/register"}><button className="button">Register</button></Link>
+            <Link to={"/"}><p>Register</p></Link>
+        </div>
+        <div id="staticHome">
+            <h1 style={{color:"white",textAlign:"left",marginTop:"20%",marginLeft:"4%"}}>Student dashboard - Profile screens designed by Anushka.</h1>
+            <h3 style={{color:"white",textAlign:"left",marginTop:"3%",marginLeft:"4%"}}>MERN STACK DEVELOPER</h3>
+        </div>
+        </div>
         </div>
         </>
     )
