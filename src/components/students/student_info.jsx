@@ -112,7 +112,6 @@ export const StudentInfo=()=>{
             <div id="filterBy">
                 <h2>Filter by</h2>
                 <p>Term</p>
-                <h1>{term}</h1>
                 <select onClick={handleFilterTerm} value={term} onChange={e=>setTerm(e.target.value)}>
                     <option></option>
                     <option>1</option>
