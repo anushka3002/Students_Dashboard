@@ -5,6 +5,7 @@ import { Homepage } from "../homepage/homepage";
 import { StudentInfo } from "../students/student_info";
 import { Dashboard } from "../dashboard/dashboard";
 import { EventInfo } from "../event/event";
+import { PieChart } from "../pieChart/pieChart";
 
 export const AllRoutes=()=>{
     return(
@@ -15,6 +16,7 @@ export const AllRoutes=()=>{
             <Route exact path="/login" element={<Login/>}/>
             <Route exact path="/student" element={<StudentInfo/>}/>
             <Route exact path="/event" element={<EventInfo/>}/>
+            <Route exact path="/pieChart" element={<PieChart/>}/>
         </Routes>
         </>
     )

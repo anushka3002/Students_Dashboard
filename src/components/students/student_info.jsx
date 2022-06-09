@@ -10,6 +10,7 @@ export const StudentInfo=()=>{
     const [theroll,setTheRoll]=useState("")
     const [thecontact,setTheContact]=useState("")
     const [num,setNum]=useState(0)
+    // const [numterm,setNumTerm]=useState("0")
 
     useEffect(()=>{
         getData()
@@ -40,6 +41,12 @@ export const StudentInfo=()=>{
         const searchContact= data.filter((studentContact)=>studentContact.contact_number.includes(thecontact))
         setData(searchContact)
     }
+    // const handleFilterTerm=()=>{
+    //     const filterTerm= data.filter((studentTerm)=>studentTerm.term.includes(numterm))
+    //     setData(filterTerm)
+    //     console.log("filter")
+    // }
+
     
 
     const handleQueryName=(e)=>{
@@ -98,13 +105,13 @@ export const StudentInfo=()=>{
                 <p>Term</p>
                 <select>
                     <option>1st Term</option>
-                    <option>2bd Term</option>
-                    <option value="">3rd Term</option>
-                    <option value="">4th Term</option>
-                    <option value="">5th Term</option>
-                    <option value="">6th Term</option>
-                    <option value="">7th Term</option>
-                    <option value="">8th Term</option>
+                    <option>2nd Term</option>
+                    <option >3rd Term</option>
+                    <option>4th Term</option>
+                    <option>5th Term</option>
+                    <option>6th Term</option>
+                    <option>7th Term</option>
+                    <option>8th Term</option>
                 </select>
                 <p>Current year</p>
                 <select>

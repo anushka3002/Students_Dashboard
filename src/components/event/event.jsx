@@ -9,7 +9,7 @@ export const EventInfo=()=>{
     // const [thename,setTheName]=useState("")
     // const [theroll,setTheRoll]=useState("")
     // const [thecontact,setTheContact]=useState("")
-    // const [num,setNum]=useState(0)
+    const [num,setNum]=useState(0)
 
     useEffect(()=>{
         getData()
@@ -19,7 +19,7 @@ export const EventInfo=()=>{
     const getData=()=>{
         axios.get("http://localhost:3332/event/eventInfo").then((res)=>{
             console.log(res.data)
-            // setNum(res.data.length)
+            setNum(res.data.length)
             setData(res.data)
         }).catch((err)=>{
             console.log("Error:"+err)
@@ -58,7 +58,7 @@ export const EventInfo=()=>{
         <div id="bigContainerEvent">
         <div id="firstContainerEvent">
             <h1>Event List</h1>
-            {/* <h3>Count of Student:{num}</h3> */}
+            <h3>Count of Events:{num}</h3>
             <table id="eventsTable">
                 <tr>
                     <th>Event Name</th>
@@ -91,25 +91,20 @@ export const EventInfo=()=>{
             <button id="studentButton" onClick={handleSearchContact}>Contact</button> */}
             </div>
 
+            <div id="eventStatus">
+                <h2>Event Status</h2>
+                <div id="statusCont"><p>Completed Events</p><div style={{backgroundColor:"red"}} id="comeventCircle"></div></div>
+                <div id="statusCont"><p>Upcoming Events</p><div style={{backgroundColor:"green"}} id="comeventCircle"></div></div>
+                <div id="statusCont"><p>Ongoing Events</p><div style={{backgroundColor:"blue"}} id="comeventCircle"></div></div>
+            </div>
+
             <div id="filterByEvent">
                 <h2>Filter by</h2>
-                <p>Term</p>
+                <p>Type of Events</p>
                 <select>
-                    <option>1st Term</option>
-                    <option>2bd Term</option>
-                    <option value="">3rd Term</option>
-                    <option value="">4th Term</option>
-                    <option value="">5th Term</option>
-                    <option value="">6th Term</option>
-                    <option value="">7th Term</option>
-                    <option value="">8th Term</option>
-                </select>
-                <p>Current year</p>
-                <select>
-                    <option value="">1st Year</option>
-                    <option value="">2nd Year</option>
-                    <option value="">3rd Year</option>
-                    <option value="">4th Year</option>
+                    <option value="">Upcoming Events</option>
+                    <option value="">Ongoing Events</option>
+                    <option value="">Completed Events</option>
                 </select>
             </div>
 
