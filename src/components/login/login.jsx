@@ -39,7 +39,7 @@ export const Login=()=>{
             <br/>
             <Link to={"/dashboard"}><button  id="signbutton" className="button" onClick={login}>Login</button></Link>
             <div>or</div>
-            <Link to={"/"}><p>Register</p></Link>
+            <Link to={"/"}><p>Don't have an account? Register</p></Link>
         </div>
         <div id="staticHome">
             <h1 style={{color:"white",textAlign:"left",marginTop:"20%",marginLeft:"4%"}}>Student dashboard - Profile screens designed by Anushka.</h1>

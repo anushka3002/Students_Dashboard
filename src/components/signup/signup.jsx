@@ -58,9 +58,9 @@ export const Register=()=>{
                 <br/>
                 <div></div>
                 <Link to={"/dashboard"}><button id="signbutton"
-                 onClick={register}>SignUp</button></Link>
+                 onClick={register}>Register</button></Link>
                 <p>Or</p>
-                <Link to={"/login"}><p style={{marginTop:"-11px"}}>Login</p></Link>
+                <Link to={"/login"}><p style={{marginTop:"-11px"}}>Already Registered? Login</p></Link>
         </div>
         <div id="staticHome">
             <h1 style={{color:"white",textAlign:"left",marginTop:"20%",marginLeft:"4%"}}>Student dashboard - Profile screens designed by Anushka.</h1>
