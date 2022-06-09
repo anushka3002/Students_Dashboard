@@ -55,8 +55,8 @@ export const Register=()=>{
                 <br/>
                 <br/>
                 <div></div>
-                <button
-                 onClick={register}>Submit</button>
+                <Link to={"/dashboard"}><button
+                 onClick={register}>Submit</button></Link>
                 <p>Or</p>
                 <Link to={"/login"}><button>Login</button></Link>
         </div>

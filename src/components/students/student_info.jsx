@@ -10,6 +10,7 @@ export const StudentInfo=()=>{
     const [theroll,setTheRoll]=useState("")
     const [thecontact,setTheContact]=useState("")
     const [num,setNum]=useState(0)
+    const [term,setTerm]=useState(0)
     // const [numterm,setNumTerm]=useState("0")
 
     useEffect(()=>{
@@ -89,6 +90,8 @@ export const StudentInfo=()=>{
         </div>
         <div id="secondContainer">
         <div id="SearchBy">
+            <br/>
+            <br/>
                 <h2>Search by</h2>
             <input type="text" onChange={handleQueryName}></input>
             <button id="studentButton" onClick={handleSearchName}>Name</button>

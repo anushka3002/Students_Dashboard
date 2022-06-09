@@ -35,7 +35,7 @@ export const Login=()=>{
             <input id="loginInput" type="password" name="password" value={user.password} placeholder="Enter your password" onChange={handleChange}></input>
             <br/>
             <br/>
-            <button className="button" onClick={login}>Login</button>
+            <Link to={"/dashboard"}><button className="button" onClick={login}>Login</button></Link>
             <div>or</div>
             <Link to={"/register"}><button className="button">Register</button></Link>
         </div>

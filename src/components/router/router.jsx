@@ -11,12 +11,13 @@ export const AllRoutes=()=>{
     return(
         <>
         <Routes>
-            <Route exact path="/" element={<Dashboard/>}/>
-            <Route exact path="/register" element={<Register/>}/>
+            <Route exact path="/" element={<Register/>}/>
+            {/* <Route exact path="/register" element={<Register/>}/> */}
             <Route exact path="/login" element={<Login/>}/>
             <Route exact path="/student" element={<StudentInfo/>}/>
             <Route exact path="/event" element={<EventInfo/>}/>
             <Route exact path="/pieChart" element={<PieChart/>}/>
+            <Route exact path="/dashboard" element={<Dashboard/>}/>
         </Routes>
         </>
     )
