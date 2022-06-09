@@ -1,13 +1,46 @@
+#studentOut{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHi1q0FXhtvvAq95oeruhjDJd9ZYIR0ntVcw&usqp=CAU");
+    background-size: 100% 700px;
+    border:1px solid transparent;
+    margin-left: -4px;
+}
 #signupbox{
     display: block;
-    border:1px solid black;
-    width:25%;
-    height:420px;
-    margin:auto;
-    margin-top: 100px;
+    border-right:1px solid black;
+    width:47%;
+    height:100%;
     text-align: center;
+    /* background-color:rgba(0, 90, 128, 0.788) ; */
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 #registerInput{
     width:80%;
     height:10%;
+}
+#signContainer{
+    width:80%;
+    height:520px;
+    /* border:1px solid black; */
+    display: flex;
+    margin:auto;
+    margin-top: 50px;
+    margin-bottom: 5%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#staticHome{
+    width:53%;
+    height:100%;
+    /* border:1px solid black; */
+    background-image: url("https://images.unsplash.com/photo-1534665482403-a909d0d97c67?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bWFuJTIwd29ya2luZyUyMG9uJTIwY29tcHV0ZXJ8ZW58MHx8MHx8&w=1000&q=80");
+    background-size: 100% 100%;
+     box-shadow: 100px 100px 200px 200px rgba(0, 90, 128, 0.788) inset;
+}
+#signbutton{
+    background-color:rgba(0, 90, 128, 0.788) ;
+    border: none;
+    border-radius: 5px;
+    color:white;
+    font-size: 17px;
+    padding:10px;
 }

@@ -38,9 +38,11 @@ export const Register=()=>{
     }
 
     return(
+        <div id="studentOut">
+        <div id="signContainer">
         <div id="signupbox">
             {/* {console.log("User",user)} */}
-                <h2>Sign Up</h2>
+                <h2 style={{textDecoration:"underline"}}>SIGN UP</h2>
                 <br/>
                 <input id="registerInput" type="text" name="name" value={user.name} placeholder="Enter you name" onChange={handleChange}></input>
                 <br/>
@@ -55,10 +57,16 @@ export const Register=()=>{
                 <br/>
                 <br/>
                 <div></div>
-                <Link to={"/dashboard"}><button
-                 onClick={register}>Submit</button></Link>
+                <Link to={"/dashboard"}><button id="signbutton"
+                 onClick={register}>SignUp</button></Link>
                 <p>Or</p>
-                <Link to={"/login"}><button>Login</button></Link>
+                <Link to={"/login"}><p style={{marginTop:"-11px"}}>Login</p></Link>
+        </div>
+        <div id="staticHome">
+            <h1 style={{color:"white",textAlign:"left",marginTop:"20%",marginLeft:"4%"}}>Student dashboard - Profile screens designed by Anushka.</h1>
+            <h3 style={{color:"white",textAlign:"left",marginTop:"3%",marginLeft:"4%"}}>MERN STACK DEVELOPER</h3>
+        </div>
+        </div>
         </div>
     )
 }
