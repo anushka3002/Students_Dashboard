@@ -10,8 +10,8 @@ export const StudentInfo=()=>{
     const [theroll,setTheRoll]=useState("")
     const [thecontact,setTheContact]=useState("")
     const [num,setNum]=useState(0)
-    const [term,setTerm]=useState(0)
-    // const [numterm,setNumTerm]=useState("0")
+    const [term,setTerm]=useState("")
+    const [year,setYear]=useState("")
 
     useEffect(()=>{
         getData()
@@ -42,11 +42,17 @@ export const StudentInfo=()=>{
         const searchContact= data.filter((studentContact)=>studentContact.contact_number.includes(thecontact))
         setData(searchContact)
     }
-    // const handleFilterTerm=()=>{
-    //     const filterTerm= data.filter((studentTerm)=>studentTerm.term.includes(numterm))
-    //     setData(filterTerm)
-    //     console.log("filter")
-    // }
+    const handleFilterTerm=()=>{
+        const filterTerm= data.filter((studentTerm)=>studentTerm.term.includes(term))
+        setData(filterTerm)
+        console.log("filter")
+    }
+
+    const handleFilterYear=()=>{
+        const filterYear= data.filter((studentYear)=>studentYear.current_year.includes(year))
+        setData(filterYear)
+        console.log("filter")
+    }
 
     
 
@@ -106,22 +112,25 @@ export const StudentInfo=()=>{
             <div id="filterBy">
                 <h2>Filter by</h2>
                 <p>Term</p>
-                <select>
-                    <option>1st Term</option>
-                    <option>2nd Term</option>
-                    <option >3rd Term</option>
-                    <option>4th Term</option>
-                    <option>5th Term</option>
-                    <option>6th Term</option>
-                    <option>7th Term</option>
-                    <option>8th Term</option>
+                <h1>{term}</h1>
+                <select onClick={handleFilterTerm} value={term} onChange={e=>setTerm(e.target.value)}>
+                    <option></option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
                 </select>
                 <p>Current year</p>
-                <select>
-                    <option value="">1st Year</option>
-                    <option value="">2nd Year</option>
-                    <option value="">3rd Year</option>
-                    <option value="">4th Year</option>
+                <select onClick={handleFilterYear} value={year} onChange={e=>setYear(e.target.value)}>
+                    <option></option>
+                    <option>1st</option>
+                    <option>2nd</option>
+                    <option>3rd</option>
+                    <option>4th</option>
                 </select>
             </div>
 
