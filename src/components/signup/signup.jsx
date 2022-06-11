@@ -28,7 +28,6 @@ export const Register=()=>{
             .then(res=>console.log(res))
             alert("User Registered")
             setNavigate(true)
-            
         }
         else{
             console.log(res)
