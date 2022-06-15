@@ -2,10 +2,11 @@ import "./signupbox.css"
 import axios from "axios"
 import { useState } from "react"
 import { Link } from "react-router-dom"
+import { useNavigate } from "react-router-dom";
 
 export const Register=()=>{
     const [navigate,setNavigate]=useState(false)
-
+    const Navigate=useNavigate()
     const [user,setUser] = useState({
         name:"",
         email:"",
@@ -25,14 +26,18 @@ export const Register=()=>{
         const {name,email,mobile,password}=user
         if(name && email && mobile && password){
             axios.post("http://localhost:3332/admin/register",user)
-            .then(res=>console.log(res))
+            .then((res)=>{console.log(res.data)
+            setUser(res.data)
             alert("User Registered")
-            setNavigate(true)
-        }
+            Navigate("/dashboard")}
+        ).catch((err)=>{
+            console.log(err)
+            alert("User with this email is already registered")
+        })
+    }
         else{
-            console.log(res)
+            console.log("error")
             alert("Invalid Input")
-            setNavigate(false)
         }
     }
 
@@ -56,8 +61,8 @@ export const Register=()=>{
                 <br/>
                 <br/>
                 <div></div>
-                <Link to={"/dashboard"}><button id="signbutton"
-                 onClick={register}>Register</button></Link>
+                <button id="signbutton"
+                 onClick={register}>Register</button>
                 <p>Or</p>
                 <Link to={"/login"}><p style={{marginTop:"-11px"}}>Already Registered? Login</p></Link>
         </div>
